@@ -1,0 +1,13 @@
+services:
+  dev-env:
+    image: design-for-coverage
+    build:
+      context: .
+      args:
+          uid: ${UID}
+          username: ${USERNAME}
+
+    tty: true
+    working_dir: /home/${USER}/project
+    volumes:
+      - ./:/home/${USER}/project
