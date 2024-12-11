@@ -50,13 +50,14 @@ message("* Current build type is : ${CMAKE_BUILD_TYPE}")
 include(CTest)
 
 # Add Internal Components
-add_subdirectory(objLibEx)
 add_subdirectory(libEx)
 add_subdirectory(doc)
 
 # Code Coverage target
 add_custom_target(coverage  
         COMMAND gcovr 
+        --html-details coverage.html
+        --txt
         -r ${CMAKE_CURRENT_SOURCE_DIR}
         ${coverage_files_dir}
         VERBATIM)
@@ -69,12 +70,3 @@ add_custom_target(scheck ALL
                 -i/usr/src/googletest 
                 --project=compile_commands.json
         VERBATIM)
-
-# Create application
-# Add executable using OBJECTS library 
-# https://cmake.org/cmake/help/v4.4/command/add_library.html#id4
-add_executable(${PROJECT_NAME} $<TARGET_OBJECTS:objLibEx>)
-# Link required libraries
-target_link_libraries(${PROJECT_NAME} PUBLIC libEx)
-# Install target configuration
-install(TARGETS ${PROJECT_NAME} DESTINATION bin)

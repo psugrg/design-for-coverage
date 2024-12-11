@@ -1,3 +1,0 @@
-#define VERSION_MAJOR @cmproj_VERSION_MAJOR@
-#define VERSION_MINOR @cmproj_VERSION_MINOR@
-#define VERSION_PATCH @cmproj_VERSION_PATCH@
