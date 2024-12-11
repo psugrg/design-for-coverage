@@ -50,8 +50,8 @@ message("* Current build type is : ${CMAKE_BUILD_TYPE}")
 include(CTest)
 
 # Add Internal Components
+add_subdirectory(externLib)
 add_subdirectory(libEx)
-add_subdirectory(doc)
 
 # Code Coverage target
 add_custom_target(coverage  
