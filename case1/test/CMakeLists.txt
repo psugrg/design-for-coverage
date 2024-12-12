@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.16)
 find_package(GTest)
 
 # Test project name
-project(libEx_test)
+project(case1_test)
 
 # Add googletest subdirectory
 add_subdirectory(/usr/src/googletest ./googletest)
@@ -17,7 +17,7 @@ add_executable(${PROJECT_NAME}
     test.cpp)
 
 # Link required libraries
-target_link_libraries(${PROJECT_NAME} libEx gtest gtest_main)
+target_link_libraries(${PROJECT_NAME} case1 gtest gtest_main)
 
 # Add tests to CTest
 gtest_discover_tests(${PROJECT_NAME})

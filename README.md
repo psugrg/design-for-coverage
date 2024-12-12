@@ -55,14 +55,6 @@ framework. This project uses an installed version of the *GoogleTest* framework.
 
 - Run `ctest -VV` in the `./build` folder to start tests.
 
-## Memory Leaks Detection
-
-Memory leaks detection is made using [Valgrind](https://valgrind.org/) utility.
-
-### Memory Leaks Detection Usage
-
-- Run `ctest -T memcheck` in the `./build` folder to start memory check.
-
 ## Code Coverage
 
 Code coverage analysis is done using the

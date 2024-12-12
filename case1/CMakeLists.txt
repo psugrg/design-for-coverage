@@ -5,10 +5,13 @@
 cmake_minimum_required(VERSION 3.16)
 
 # The name of the library
-project(libEx)
+project(case1)
 
 # Creates a library 
-add_library(${PROJECT_NAME} src/Example.cpp)
+add_library(${PROJECT_NAME} src/Case1.cpp)
+
+# Link required libraries
+target_link_libraries(${PROJECT_NAME} PUBLIC externLib)
 
 # Add include directories to the project
 target_include_directories(${PROJECT_NAME} PUBLIC
@@ -23,8 +26,3 @@ set(coverage_files_dir
 
 # Add Tests
 add_subdirectory(test)
-
-# Install rules
-# NOTE: This is a static library hence no need of installing it. Let's install it anyhow as an example.
-install(TARGETS ${PROJ_NAME} DESTINATION lib)
-install(FILES inc/Example.hpp DESTINATION include)
