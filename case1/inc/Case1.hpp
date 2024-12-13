@@ -1,5 +1,5 @@
-#ifndef __INTEXAMPLE_HPP
-#define __INTEXAMPLE_HPP
+#ifndef CASE1_HPP
+#define CASE1_HPP
 
 #include <stdexcept>
 
@@ -30,4 +30,4 @@ private:
 };
 }  // namespace case1
 
-#endif  // __INTEXAMPLE_HPP
+#endif  // CASE1_HPP
