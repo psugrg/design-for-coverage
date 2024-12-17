@@ -8,7 +8,7 @@ cmake_minimum_required(VERSION 3.16)
 project(case1)
 
 # Creates a library 
-add_library(${PROJECT_NAME} src/Case1.cpp)
+add_library(${PROJECT_NAME} src/Case1.cpp src/Solution1.cpp)
 
 # Link required libraries
 target_link_libraries(${PROJECT_NAME} PUBLIC externLib)

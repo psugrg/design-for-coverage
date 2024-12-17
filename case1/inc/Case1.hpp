@@ -7,19 +7,6 @@
 
 namespace case1
 {
-/**
- * @brief Class under test
- *
- * The case here is to be able to fully cover the code inside of this class
- * using tests.
- *
- * Assumption:  library::Storage can't be changed since it's an external
- * dependency
- *
- * This implementation can't be fully covered because @c m_storage.put(val)
- * will never return false thus on of the branches in the @c if statement will
- * not be covered.
- */
 class Foo
 {
 public:
