@@ -17,7 +17,8 @@ add_executable(${PROJECT_NAME}
     test.cpp)
 
 # Link required libraries
-target_link_libraries(${PROJECT_NAME} case1 gtest gtest_main)
+target_link_libraries(${PROJECT_NAME} case1 gtest_main gmock_main)
 
 # Add tests to CTest
+include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME})

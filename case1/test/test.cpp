@@ -1,9 +1,13 @@
+#include <gmock/gmock.h>
 #include <gtest/gtest.h>
 
 #include <memory>
 
 #include "Case1.hpp"
 #include "Solution1.hpp"
+
+using ::testing::_;
+using ::testing::Return;
 
 class Case1Tests : public ::testing::Test
 {
@@ -21,15 +25,8 @@ TEST_F(Case1Tests, case1)
 class StorageMock : public extLibFacade::IStorage
 {
 public:
-  bool put(int) final
-  {
-    return false;
-  }
-
-  std::optional<int> get() final
-  {
-    return false;
-  }
+  MOCK_METHOD(bool, put, (int val), (override));
+  MOCK_METHOD(std::optional<int>, get, (), (override));
 };
 
 TEST_F(Case1Tests, solution1_positive)
@@ -41,7 +38,8 @@ TEST_F(Case1Tests, solution1_positive)
 
 TEST_F(Case1Tests, solution1_negative)
 {
-  auto storage = std::unique_ptr<StorageMock>();
+  auto storage = std::make_unique<StorageMock>();
 
+  EXPECT_CALL(*storage, put(4)).Times(1).WillRepeatedly(Return(false));
   ASSERT_ANY_THROW(solution1::Foo(std::move(storage), 4));
 }
