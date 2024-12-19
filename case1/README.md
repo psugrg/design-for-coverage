@@ -1,6 +1,8 @@
-# Case 1
+# Case 1 - External dependency
 
-The case here is to be able to fully cover the code inside of this class using tests.
+In this case we're focusing on the situation where our code uses an external dependency that doesn't have any interface class.
+
+The object of that class is used by the internal algorithm of our implementation and is private member of our class `Foo`.
 
 > **Assumption**  
 > The `library::Storage` can't be changed since it's an external

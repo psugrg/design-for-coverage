@@ -1,5 +1,7 @@
 # Design guidelines for better tests
 
+The case here is to be able to fully cover the code inside of this class using tests.
+
 ## Development environment
 
 The project can be compile using the Docker-based development environment.
@@ -44,7 +46,7 @@ by make when `make` or `make all` command is executed.
 
 ### SonarQube
 
-[SonarQube](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode) is a very usefull on-the-fly static analysis tool for your Visual Studio Code. 
+[SonarQube](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode) is a very usefull on-the-fly static analysis tool for your Visual Studio Code.
 
 ## Unit Tests
 
